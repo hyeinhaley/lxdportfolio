@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./tailwind.config.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading- dark:bg-black">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+        <img src="./images/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"> 
+        <a href="./index.html">
+            <img src="./images/logo.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14">
+        </a>
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About the Project</a></li>
+            <li><a href="#storyboard">Storyboard</a></li>
+            <li><a href="#development">Development</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/haley-lee-montgomery" target="_blank"><img src="./images/moon_icon.png" alt="" class="w-8"></a>
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./images/menu-black.png" alt="" class="w-6">
+            </button>
+        </div>
+<!-- mobile menu -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 
+        bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer">
+            </div>
+            <li><a href="./index.html" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About the Project</a></li>
+            <li><a href="#storyboard" onclick="closeMenu()">Storyboard</a></li>
+            <li><a href="#development" onclick="closeMenu()">Development</a></li>
+        </ul>
+    </nav>
+<!--header-->
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./images/work-1.png" alt="" class="rounded-full w-40">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">How compound interest works <img src="./images/moneyEmoji.png" alt="" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Money earns money...</h1>
+        <p class="max-w-2xl mx-auto font-Ovo">Scenario-based learning experience that is designed to get you to start saving.</p>
+        <div class="flex flex-col justify-center sm:flex-row items-center gap-4 mt-10">
+            <a href="https://ctcourse1.s3.amazonaws.com/Project/story.html" target="_blank" 
+                class="px-10 py-3 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white font-semibold flex items-center gap-2 
+                hover:shadow-lg hover:scale-105 transition duration-300">
+                Experience the Project 
+                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </a>
+        </div>
+    </div>
+<!-- About the project -->
+<div id="about" class="w-full px-[12%] py-10 scroll-mt-20 bg-purple-50">
+    <h4 class="text-center text-lg font-Ovo text-gray-700 uppercase tracking-wide">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo font-bold text-gray-900 mb-8">About the Project</h2>
+    <p class="mb-10 text-base sm:text-lg text-gray-800 font-Ovo">In this project, we follow Alex, a high school senior who will choose to either purchase a car right away, 
+    or to save for a car for 6 months in hopes to buy a car. 
+    Integrating case-based learning with high degree of relevancy, I integrate elements of real-life into this experience. 
+    Motivational mechanics, such as a net-worth bar is also included not only to motivate the learner to make saving choices, but also to help them keep track of their progress.</p>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-10 my-10">
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/alex.png" alt="" class="w-64 sm:w-80 
+            rounded-3xl max-w-none gap-5 my-5">
+            <img src="./images/networth.png" alt="" class="w-64 sm:w-80 
+            rounded-3xl max-w-none">
+        </div>
+        <div class="flex items-center justify-center px-4">
+            <div class="flex-1 max-w-5xl w-full">
+                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
+                    cursor-pointer hover:bg-purple-300 hover:-translate-y-1 duration-500 
+                    hover:shadow-[4px_4px_0_#000] bg-purple-300">
+                    <img src="./images/code-icon.png" alt="" class="w-7 mt-3 max-w-full">
+                    <h3 class="my-4 font-semibold text-gray-700">Target Audience</h3>
+                    <p class="text-gray-600 text-sm">High school seniors and adults who are struggling to see the benefits of saving.</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
+                    cursor-pointer hover:bg-purple-300 hover:-translate-y-1 duration-500 
+                    hover:shadow-[4px_4px_0_#000] bg-purple-300">
+                        <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 max-w-full">
+                        <h3 class="my-4 font-semibold text-gray-700">Learning Objective</h3>
+                        <p class="text-gray-600 text-sm">Students will create and calculate
+                        for their own use cases of the compound interest formula.</p>
+                    </li>
+                    
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
+                    cursor-pointer hover:bg-purple-300 hover:-translate-y-1 duration-500 
+                    hover:shadow-[4px_4px_0_#000] bg-purple-300">
+                        <img src="./images/project-icon.png" alt="" class="w-7 mt-3 max-w-full">
+                        <h3 class="my-4 font-semibold text-gray-700">ID Skills</h3>
+                        <p class="text-gray-600 text-sm"> Action Mapping, Storyboarding, Vyond and Articulate Storyline</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700 font-Ovo">Tools I used</h4>
+                <ul class="flex flex-wrap items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer 
+                    hover:-translate-y-1 duration-500 bg-fuchsia-900">
+                        <img src="./images/mindmeister.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer 
+                    hover:-translate-y-1 duration-500 bg-fuchsia-900">
+                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer 
+                    hover:-translate-y-1 duration-500 bg-fuchsia-900">
+                        <img src="./images/vyondLogo.avif" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 
+                    aspect-square border border-gray-400 rounded-lg cursor-pointer 
+                    hover:-translate-y-1 duration-500 bg-fuchsia-900">
+                        <img src="./images/storyline.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700 font-Ovo"> Color Theme</h4>
+                <img src="./images/colorTheme.png" alt="">
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+ <!--storyboard-->
+ <div id="storyboard" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center text-lg font-Ovo text-gray-700 uppercase tracking-wide">Analysis and Design</h4>
+    <h2 class="text-center text-5xl font-Ovo font-bold text-gray-900 mb-8">My Storyboards</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I began my process by drafting the acton map, 
+    outlining exactly what learning objectives that I want learners to achieve, then moved onto the text-based and low and high fidelity mockup using Figma.
+    <em>Click on each of the block below to see each process.</em> </p>
+    <div class="grid grid-cols-auto sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
+        <a href="./images/moneyMap.png" class="imageTrigger">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 
+            hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <img src="./images/mindmeister.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700">Action Mapping</h3>
+                <p class="text-sm text-gray-600 leading-5">Inspired by <em>Map It</em> by Cathy Moore, I began my design process with action mapping with MindMeister.</p>
+            </div>
+        </a>
+        <a href="./images/textbased.png" class="imageTrigger">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 
+            hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <img src="./images/word.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-700">Text-based</h3>
+                <p class="text-sm text-gray-600 leading-5">I created a text-based storyboard after brainstorming thoroughly with pen and paper.</p>
+            </div>
+        </a>
+        <a href="./videos/lowfidvid.mp4" class="videoTrigger">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 
+            hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <img src="./images/lowFig.png" alt="" class="w-8">
+                <h3 class="text-lg my-4 text-gray-700">Low-Fidelity</h3>
+                <p class="text-sm text-gray-600 leading-5">Low fidelity mockup created with Figma showcased how the user choice affects the outcome.</p>
+            </div>
+        </a>
+        <a href="./videos/highfidvid.mp4" class="videoTrigger">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 
+            hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <img src="./images/figma.png" alt="" class="w-8">
+                <h3 class="text-lg my-4 text-gray-700">High-Fidelity</h3>
+                <p class="text-sm text-gray-600 leading-5">As I was working on the video production in Vyond Studio, I created a high fidelity mockup using Figma.</p>
+            </div>
+        </a>
+    </div>
+ </div>
+ <!--Development-->
+ <div id="development" class="w-full px-[12%] py-16 scroll-mt-20 bg-purple-50">
+    <h4 class="text-center text-lg font-Ovo text-gray-700 uppercase tracking-wide">Articulate Storyline & Vyond</h4>
+    <h2 class="text-center text-5xl font-Ovo font-bold text-gray-900 mb-8">Development Process</h2>
+
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+        <p class="text-lg text-gray-700 font-light leading-relaxed">
+            Once I had my low-fidelity mockup, I began creating visuals and videos on Vyond Studio. 
+            After setting my color theme and finalizing a few scenes, I moved on to creating a high-fidelity mockup. 
+            The creation of videos and the high-fidelity mockup happened simultaneously.
+        </p>
+
+        <div class="flex justify-center">
+            <video class="rounded-lg shadow-lg w-full max-w-2xl" controls autoplay loop>
+                <source src="./videos/vyondDemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="text-lg text-gray-700 font-light leading-relaxed">
+            Once the high-fidelity mockup and videos were completed, I downloaded all the videos and began production in Storyline. 
+            The project became quite extensive, offering learners autonomy as they progressed through the experience. 
+            Here’s a demonstration of how the final project looked in Storyline.
+        </p>
+
+        <div class="flex justify-center">
+            <video class="rounded-lg shadow-lg w-full max-w-2xl" controls autoplay loop>
+                <source src="./videos/storylineDemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="text-lg text-gray-700 font-light leading-relaxed">
+            If you’re looking for an instructional designer who can craft engaging and visually appealing learning experiences, 
+            let’s connect! I’d love to hear from you.
+        </p>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="flex flex-col justify-center sm:flex-row items-center gap-4 mt-10">
+        <a href="https://ctcourse1.s3.amazonaws.com/Project/story.html" target="_blank" 
+            class="px-10 py-3 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white font-semibold flex items-center gap-2 
+            hover:shadow-lg hover:scale-105 transition duration-300">
+            Experience the Project 
+            <img src="./images/right-arrow-white.png" alt="" class="w-4">
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="flex flex-col justify-center sm:flex-row items-center gap-5 mt-8">
+        <a href="#top" class="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-700 
+            rounded-full py-3 px-10 mx-auto my-10 hover:bg-[#fcf4ff] hover:border-[#b820e6] hover:text-[#b820e6] transition duration-300">
+            Back to the Top
+        </a>
+    </div>
+</div>
+
+<!--footer-->
+<div class="mt-20">
+    <div class="text-center">
+        <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2">
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6">
+            haley.lee.montgomery@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>
+            &copy; 2025 Haley Lee Montgomery. All rights reserved
+        </p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/haley-lee-montgomery">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@hyeinlee864">YouTube</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-20 hidden">
+        <div class="relative bg-white p-4 rounded-lg shadow-lg">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-600 text-xl">&times;</button>
+            <img id="modalImage" src="" class="max-w-full max-h-[80vh] rounded-md">
+        </div>
+    </div>    
+<!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-20 hidden">
+        <div class="relative bg-white p-4 rounded-lg shadow-lg w-full max-w-3xl">
+            <button id="closeVideoModal" class="absolute top-2 right-2 text-gray-600 text-xl">&times;</button>
+            <video id="modalVideo" controls class="w-full rounded-md">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
